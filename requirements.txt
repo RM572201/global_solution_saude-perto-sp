@@ -1,0 +1,3 @@
+# Dependencias Python do codigo versionado do projeto Saude Perto SP.
+# Arquivo criado intencionalmente sem dependencias.
+# Adicione bibliotecas somente apos confirmar que sao necessarias ao codigo em src/ (incluindo src/utils/) ou tests/.
