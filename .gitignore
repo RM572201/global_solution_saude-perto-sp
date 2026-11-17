@@ -1,0 +1,72 @@
+# =========================================================
+# Saude Perto SP - .gitignore
+# =========================================================
+
+# --- Arquivos temporarios e compilados Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# --- Ambientes virtuais ---
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# --- Variaveis de ambiente ---
+.env
+.env.*
+!.env.example
+
+# --- Credenciais, tokens e segredos ---
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+credentials*.json
+*credentials*
+*secret*
+*.token
+.databrickscfg
+
+# --- Arquivos internos do ambiente Databricks ---
+.databricks/
+
+# --- Arquivos de sistema ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# --- Caches ---
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# --- Arquivos temporarios de notebooks ---
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# --- Dados (armazenados no Volume /Volumes/workspace/default/ssp_raw_files e no Unity Catalog) ---
+# Dados brutos (KML, KMZ, Excel) e processados (Parquet, CSV) nunca são versionados.
+*.kml
+*.kmz
+*.xlsx
+*.xls
+*.parquet
+data/
+*.csv
+# Exceção: CSVs de documentação (ex.: dicionário de dados) em docs/ podem ser versionados.
+# Revise o conteúdo antes do commit: não devem conter registros ou valores censitários.
+!docs/**/*.csv
